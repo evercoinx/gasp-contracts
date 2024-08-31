@@ -1,0 +1,64 @@
+{
+    "name": "gasp-contracts",
+    "version": "1.0.0",
+    "description": "Smart contracts for a test task from Gasp",
+    "scripts": {
+        "prepare": "husky",
+        "format": "prettier --write .",
+        "lint": "eslint .",
+        "compile": "hardhat compile",
+        "check": "hardhat check",
+        "test": "hardhat test --typecheck --bail",
+        "test:ci": "hardhat test --typecheck --parallel",
+        "cover": "rm -rf coverage* && hardhat coverage",
+        "gas": "REPORT_GAS=1 hardhat test --typecheck --bail",
+        "size": "hardhat size-contracts",
+        "analyze": "slitherin . --separated",
+        "analyze:ci": "slitherin --separated . --skip-clean --ignore-compile",
+        "clean": "hardhat clean && rm -rf coverage/* cache/* crytic-{corpus,export}/* mochaOutput.json testMatrix.json",
+        "node": "hardhat node",
+        "console": "hardhat console --network localhost"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/evercoinx/gasp-contracts"
+    },
+    "license": "UNLICENSED",
+    "private": true,
+    "maintainers": [
+        "Serge Grigorenko <serge.grigorenko@gmail.com>"
+    ],
+    "engines": {
+        "node": "^20.9.0",
+        "npm": ">=10.2.0"
+    },
+    "type": "commonjs",
+    "dependencies": {
+        "@openzeppelin/contracts": "^5.0.0",
+        "@openzeppelin/contracts-upgradeable": "^5.0.0"
+    },
+    "devDependencies": {
+        "@eslint/js": "^9.7.0",
+        "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+        "@nomiclabs/hardhat-etherscan": "^3.1.6",
+        "@nomiclabs/hardhat-solhint": "^4.0.0",
+        "@openzeppelin/hardhat-upgrades": "^3.0.5",
+        "@tsconfig/node20": "^20.1.1",
+        "@types/eslint__js": "^8.42.3",
+        "dotenv": "^16.0.3",
+        "eslint": "^9.7.0",
+        "eslint-config-prettier": "^9.1.0",
+        "eslint-plugin-prettier": "^5.1.3",
+        "eth-crypto": "^2.6.0",
+        "hardhat": "^2.12.6",
+        "hardhat-contract-sizer": "^2.8.0",
+        "husky": "^9.0.11",
+        "joi": "^17.7.1",
+        "prettier": "^3.0.1",
+        "prettier-plugin-solidity": "^1.1.2",
+        "solhint": "^5.0.1",
+        "typescript": "^5.5.3",
+        "typescript-eslint": "^8.0.0-alpha.49",
+        "viem": "^2.15.1"
+    }
+}

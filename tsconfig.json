@@ -1,0 +1,21 @@
+{
+    "extends": "@tsconfig/node20/tsconfig.json",
+    "compilerOptions": {
+        "allowJs": true,
+        "noEmit": true,
+        "resolveJsonModule": true,
+        "typeRoots": ["./types"]
+    },
+    "include": [
+        "scripts/**/*.ts",
+        "tasks/**/*.ts",
+        "test/**/*.ts",
+        "typechain-types/**/*.ts",
+        "types/**/*.ts",
+        "utils/**/*.ts",
+        ".solcover.js",
+        "eslint.config.js",
+        "hardhat.config.ts",
+        "prettier.config.js"
+    ]
+}
